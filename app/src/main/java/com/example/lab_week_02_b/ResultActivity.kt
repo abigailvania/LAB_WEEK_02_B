@@ -10,6 +10,7 @@ import androidx.constraintlayout.widget.ConstraintLayout
 import android.graphics.Color
 import android.widget.TextView
 import android.content.Intent
+import android.widget.Button
 
 class ResultActivity : AppCompatActivity() {
 
@@ -42,6 +43,12 @@ class ResultActivity : AppCompatActivity() {
             resultMessage.text = getString(R.string.color_code_result_message, colorCode?.uppercase()
             )
         }
+
+        val backButton = findViewById<Button>(R.id.back_button)
+        backButton.setOnClickListener {
+            finish()
+        }
+
     }
 }
 
